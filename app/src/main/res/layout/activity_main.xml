@@ -1,559 +1,137 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".MainActivity">
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
+    android:layout_height="match_parent">
 
-        <com.google.android.material.card.MaterialCardView
-            android:id="@+id/cvTransactions"
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="409dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="8dp"
-            app:cardElevation="8dp"
-            app:cardCornerRadius="8dp"
-            app:cardBackgroundColor="@color/cardview_light_background">
-
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:layout_width="match_parent"
-                android:layout_height="140dp">
-
-                <ImageView
-                    android:id="@+id/tvGreenbag"
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    android:layout_marginStart="16dp"
-                    android:layout_marginTop="8dp"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:srcCompat="@drawable/income" />
-
-                <TextView
-                    android:id="@+id/tvMoneyin"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="16dp"
-                    android:layout_marginTop="-16dp"
-                    android:text="MONEY IN"
-                    app:layout_constraintBottom_toBottomOf="@+id/tvGreenbag"
-                    app:layout_constraintStart_toEndOf="@+id/tvGreenbag"
-                    app:layout_constraintTop_toTopOf="@+id/tvGreenbag" />
-
-                <TextView
-                    android:id="@+id/tvAmount1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="2dp"
-                    android:layout_marginTop="4dp"
-                    android:text="KES 42400"
-                    app:layout_constraintEnd_toEndOf="@+id/tvMoneyin"
-                    app:layout_constraintStart_toStartOf="@+id/tvMoneyin"
-                    app:layout_constraintTop_toBottomOf="@+id/tvMoneyin" />
-
-                <ImageView
-                    android:id="@+id/imageView2"
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    android:layout_marginTop="36dp"
-                    app:layout_constraintEnd_toEndOf="@+id/tvGreenbag"
-                    app:layout_constraintStart_toStartOf="@+id/tvGreenbag"
-                    app:layout_constraintTop_toBottomOf="@+id/tvGreenbag"
-                    app:srcCompat="@drawable/balance" />
-
-                <TextView
-                    android:id="@+id/tvBalance"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="16dp"
-                    android:layout_marginTop="-16dp"
-                    android:text="BALANCE"
-                    app:layout_constraintBottom_toBottomOf="@+id/imageView2"
-                    app:layout_constraintStart_toEndOf="@+id/imageView2"
-                    app:layout_constraintTop_toTopOf="@+id/imageView2" />
-
-                <TextView
-                    android:id="@+id/tvAmount2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="6dp"
-                    android:layout_marginTop="4dp"
-                    android:text="KES 18700"
-                    app:layout_constraintEnd_toEndOf="@+id/tvBalance"
-                    app:layout_constraintStart_toStartOf="@+id/tvBalance"
-                    app:layout_constraintTop_toBottomOf="@+id/tvBalance" />
-
-                <ImageView
-                    android:id="@+id/imageView3"
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    android:layout_marginTop="8dp"
-                    android:layout_marginEnd="16dp"
-                    app:layout_constraintEnd_toStartOf="@+id/tvMoneyout"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:srcCompat="@drawable/expense" />
-
-                <TextView
-                    android:id="@+id/tvMoneyout"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="-16dp"
-                    android:layout_marginEnd="36dp"
-                    android:text="MONEY OUT"
-                    app:layout_constraintBottom_toBottomOf="@+id/imageView3"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toTopOf="@+id/imageView3" />
-
-                <TextView
-                    android:id="@+id/tvAmount3"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="4dp"
-                    android:text="KES 23700"
-                    app:layout_constraintEnd_toEndOf="@+id/tvMoneyout"
-                    app:layout_constraintStart_toStartOf="@+id/tvMoneyout"
-                    app:layout_constraintTop_toBottomOf="@+id/tvMoneyout" />
-
-                <ImageView
-                    android:id="@+id/imageView4"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="36dp"
-                    app:layout_constraintEnd_toEndOf="@+id/imageView3"
-                    app:layout_constraintStart_toStartOf="@+id/imageView3"
-                    app:layout_constraintTop_toBottomOf="@+id/imageView3"
-                    app:srcCompat="@drawable/transactions" />
-
-                <TextView
-                    android:id="@+id/tvTransactions"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="24dp"
-                    android:layout_marginTop="-16dp"
-                    android:layout_marginEnd="36dp"
-                    android:text="TRANSACTION"
-                    app:layout_constraintBottom_toBottomOf="@+id/imageView4"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toEndOf="@+id/imageView4"
-                    app:layout_constraintTop_toTopOf="@+id/imageView4" />
-
-                <TextView
-                    android:id="@+id/tvAmount4"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="-4dp"
-                    android:layout_marginTop="4dp"
-                    android:layout_marginEnd="80dp"
-                    android:text="8"
-                    app:layout_constraintEnd_toEndOf="@+id/tvTransactions"
-                    app:layout_constraintStart_toStartOf="@+id/tvTransactions"
-                    app:layout_constraintTop_toBottomOf="@+id/tvTransactions" />
-
-            </androidx.constraintlayout.widget.ConstraintLayout>
-        </com.google.android.material.card.MaterialCardView>
-
-        <com.google.android.material.card.MaterialCardView
-            android:id="@+id/cvRateOne"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="8dp"
-            app:cardElevation="8dp"
-            app:cardCornerRadius="8dp"
-            app:cardBackgroundColor="@color/cardview_light_background">
-
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:layout_width="match_parent"
-                android:layout_height="80dp">
-
-                <ImageView
-                    android:id="@+id/ivRateOne"
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    android:layout_marginStart="16dp"
-                    android:layout_marginTop="8dp"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:srcCompat="@drawable/income_trx" />
-
-                <TextView
-                    android:id="@+id/tvSalaryOne"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="16dp"
-                    android:text="Salary"
-                    app:layout_constraintBottom_toBottomOf="@+id/ivRateOne"
-                    app:layout_constraintStart_toEndOf="@+id/ivRateOne"
-                    app:layout_constraintTop_toTopOf="@+id/ivRateOne" />
-
-                <TextView
-                    android:id="@+id/tvAmountOne"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="26dp"
-                    android:layout_marginTop="4dp"
-                    android:text="KES 16000"
-                    app:layout_constraintEnd_toEndOf="@+id/tvSalaryOne"
-                    app:layout_constraintStart_toStartOf="@+id/tvSalaryOne"
-                    app:layout_constraintTop_toBottomOf="@+id/tvSalaryOne" />
-
-
-            </androidx.constraintlayout.widget.ConstraintLayout>
-        </com.google.android.material.card.MaterialCardView>
-
-
-        <com.google.android.material.card.MaterialCardView
-            android:id="@+id/cvRateTwo"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="8dp"
-            app:cardElevation="8dp"
-            app:cardCornerRadius="8dp"
-            app:cardBackgroundColor="@color/cardview_light_background">
-
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:layout_width="match_parent"
-                android:layout_height="80dp">
-
-                <ImageView
-                    android:id="@+id/ivRateTwo"
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    android:layout_marginStart="16dp"
-                    android:layout_marginTop="8dp"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:srcCompat="@drawable/expense_trx" />
-
-                <TextView
-                    android:id="@+id/tvSalaryTwo"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="16dp"
-                    android:text="Rent"
-                    app:layout_constraintBottom_toBottomOf="@+id/ivRateTwo"
-                    app:layout_constraintStart_toEndOf="@+id/ivRateTwo"
-                    app:layout_constraintTop_toTopOf="@+id/ivRateTwo" />
-
-                <TextView
-                    android:id="@+id/tvAmountTwo"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="26dp"
-                    android:layout_marginTop="4dp"
-                    android:text="KES 16000"
-                    app:layout_constraintEnd_toEndOf="@+id/tvSalaryTwo"
-                    app:layout_constraintStart_toStartOf="@+id/tvSalaryTwo"
-                    app:layout_constraintTop_toBottomOf="@+id/tvSalaryTwo" />
-
-
-            </androidx.constraintlayout.widget.ConstraintLayout>
-        </com.google.android.material.card.MaterialCardView>
-
-
-
-        <com.google.android.material.card.MaterialCardView
-            android:id="@+id/cvRateThree"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="8dp"
-            app:cardElevation="8dp"
-            app:cardCornerRadius="8dp"
-            app:cardBackgroundColor="@color/cardview_light_background">
-
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:layout_width="match_parent"
-                android:layout_height="80dp">
-
-                <ImageView
-                    android:id="@+id/ivRateThree"
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    android:layout_marginStart="16dp"
-                    android:layout_marginTop="8dp"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:srcCompat="@drawable/income_trx" />
-
-                <TextView
-                    android:id="@+id/tvSalaryThree"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="16dp"
-                    android:text="Dividends"
-                    app:layout_constraintBottom_toBottomOf="@+id/ivRateThree"
-                    app:layout_constraintStart_toEndOf="@+id/ivRateThree"
-                    app:layout_constraintTop_toTopOf="@+id/ivRateThree" />
-
-                <TextView
-                    android:id="@+id/tvAmount5"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="26dp"
-                    android:layout_marginTop="4dp"
-                    android:text="KES 16000"
-                    app:layout_constraintEnd_toEndOf="@+id/tvSalaryThree"
-                    app:layout_constraintStart_toStartOf="@+id/tvSalaryThree"
-                    app:layout_constraintTop_toBottomOf="@+id/tvSalaryThree" />
-
-
-            </androidx.constraintlayout.widget.ConstraintLayout>
-        </com.google.android.material.card.MaterialCardView>
-
-
-        <com.google.android.material.card.MaterialCardView
-            android:id="@+id/cvRateFour"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="8dp"
-            app:cardElevation="8dp"
-            app:cardCornerRadius="8dp"
-            app:cardBackgroundColor="@color/cardview_light_background">
-
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:layout_width="match_parent"
-                android:layout_height="80dp">
-
-                <ImageView
-                    android:id="@+id/ivRateFour"
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    android:layout_marginStart="16dp"
-                    android:layout_marginTop="8dp"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:srcCompat="@drawable/expense_trx" />
-
-                <TextView
-                    android:id="@+id/tvSalaryFour"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="16dp"
-                    android:text="Electricity"
-                    app:layout_constraintBottom_toBottomOf="@+id/ivRateFour"
-                    app:layout_constraintStart_toEndOf="@+id/ivRateFour"
-                    app:layout_constraintTop_toTopOf="@+id/ivRateFour" />
-
-                <TextView
-                    android:id="@+id/tvAmountFour"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="26dp"
-                    android:layout_marginTop="4dp"
-                    android:text="KES 16000"
-                    app:layout_constraintEnd_toEndOf="@+id/tvSalaryFour"
-                    app:layout_constraintStart_toStartOf="@+id/tvSalaryFour"
-                    app:layout_constraintTop_toBottomOf="@+id/tvSalaryFour" />
-
-
-            </androidx.constraintlayout.widget.ConstraintLayout>
-        </com.google.android.material.card.MaterialCardView>
-
-
-
-        <com.google.android.material.card.MaterialCardView
-            android:id="@+id/cvRateFive"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="8dp"
-            app:cardElevation="8dp"
-            app:cardCornerRadius="8dp"
-            app:cardBackgroundColor="@color/cardview_light_background">
-
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:layout_width="match_parent"
-                android:layout_height="80dp">
-
-                <ImageView
-                    android:id="@+id/ivFive"
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    android:layout_marginStart="16dp"
-                    android:layout_marginTop="8dp"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:srcCompat="@drawable/expense_trx" />
-
-                <TextView
-                    android:id="@+id/tvSalaryFive"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="16dp"
-                    android:text="Internet"
-                    app:layout_constraintBottom_toBottomOf="@+id/ivFive"
-                    app:layout_constraintStart_toEndOf="@+id/ivFive"
-                    app:layout_constraintTop_toTopOf="@+id/ivFive" />
-
-                <TextView
-                    android:id="@+id/tvAmountFive"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="26dp"
-                    android:layout_marginTop="4dp"
-                    android:text="KES 16000"
-                    app:layout_constraintEnd_toEndOf="@+id/tvSalaryFive"
-                    app:layout_constraintStart_toStartOf="@+id/tvSalaryFive"
-                    app:layout_constraintTop_toBottomOf="@+id/tvSalaryFive" />
-
-
-            </androidx.constraintlayout.widget.ConstraintLayout>
-        </com.google.android.material.card.MaterialCardView>
-
-
-
-
-
-        <com.google.android.material.card.MaterialCardView
-            android:id="@+id/cvRateSix"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="8dp"
-            app:cardElevation="8dp"
-            app:cardCornerRadius="8dp"
-            app:cardBackgroundColor="@color/cardview_light_background">
-
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:layout_width="match_parent"
-                android:layout_height="80dp">
-
-                <ImageView
-                    android:id="@+id/ivSix"
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    android:layout_marginStart="16dp"
-                    android:layout_marginTop="8dp"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:srcCompat="@drawable/expense_trx" />
-
-                <TextView
-                    android:id="@+id/tvSalarySix"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="16dp"
-                    android:text="Shopping"
-                    app:layout_constraintBottom_toBottomOf="@+id/ivSix"
-                    app:layout_constraintStart_toEndOf="@+id/ivSix"
-                    app:layout_constraintTop_toTopOf="@+id/ivSix" />
-
-                <TextView
-                    android:id="@+id/tvAmountSix"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="26dp"
-                    android:layout_marginTop="4dp"
-                    android:text="KES 16000"
-                    app:layout_constraintEnd_toEndOf="@+id/tvSalarySix"
-                    app:layout_constraintStart_toStartOf="@+id/tvSalarySix"
-                    app:layout_constraintTop_toBottomOf="@+id/tvSalarySix" />
-
-
-            </androidx.constraintlayout.widget.ConstraintLayout>
-        </com.google.android.material.card.MaterialCardView>
-
-
-
-
-        <com.google.android.material.card.MaterialCardView
-            android:id="@+id/cvRateSeven"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="8dp"
-            app:cardElevation="8dp"
-            app:cardCornerRadius="8dp"
-            app:cardBackgroundColor="@color/cardview_light_background">
-
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:layout_width="match_parent"
-                android:layout_height="80dp">
-
-                <ImageView
-                    android:id="@+id/ivSeven"
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    android:layout_marginStart="16dp"
-                    android:layout_marginTop="8dp"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:srcCompat="@drawable/expense_trx" />
-
-                <TextView
-                    android:id="@+id/tvSalarySeven"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="16dp"
-                    android:text="BusFare"
-                    app:layout_constraintBottom_toBottomOf="@+id/ivSeven"
-                    app:layout_constraintStart_toEndOf="@+id/ivSeven"
-                    app:layout_constraintTop_toTopOf="@+id/ivSeven" />
-
-                <TextView
-                    android:id="@+id/tvAmountSeven"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="26dp"
-                    android:layout_marginTop="4dp"
-                    android:text="KES 16000"
-                    app:layout_constraintEnd_toEndOf="@+id/tvSalarySeven"
-                    app:layout_constraintStart_toStartOf="@+id/tvSalarySeven"
-                    app:layout_constraintTop_toBottomOf="@+id/tvSalarySeven" />
-
-
-            </androidx.constraintlayout.widget.ConstraintLayout>
-        </com.google.android.material.card.MaterialCardView>
-
-
-
-
-        <com.google.android.material.card.MaterialCardView
-            android:id="@+id/cvRateEight"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="8dp"
-            app:cardElevation="8dp"
-            app:cardCornerRadius="8dp"
-            app:cardBackgroundColor="@color/cardview_light_background">
-
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:layout_width="match_parent"
-                android:layout_height="80dp">
-
-                <ImageView
-                    android:id="@+id/ivEight"
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    android:layout_marginStart="16dp"
-                    android:layout_marginTop="8dp"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:srcCompat="@drawable/expense_trx" />
-
-                <TextView
-                    android:id="@+id/tvSalaryEight"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="16dp"
-                    android:text="WaterBill"
-                    app:layout_constraintBottom_toBottomOf="@+id/ivEight"
-                    app:layout_constraintStart_toEndOf="@+id/ivEight"
-                    app:layout_constraintTop_toTopOf="@+id/ivEight" />
-
-                <TextView
-                    android:id="@+id/tvAmountEight"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="26dp"
-                    android:layout_marginTop="4dp"
-                    android:text="KES 16000"
-                    app:layout_constraintEnd_toEndOf="@+id/tvSalaryEight"
-                    app:layout_constraintStart_toStartOf="@+id/tvSalaryEight"
-                    app:layout_constraintTop_toBottomOf="@+id/tvSalaryEight" />
-
-
-            </androidx.constraintlayout.widget.ConstraintLayout>
-        </com.google.android.material.card.MaterialCardView>
-   </LinearLayout>
-</ScrollView>
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/ivIncome"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="8dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/income" />
+
+            <TextView
+                android:id="@+id/tvIncome"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:text="TextView"
+                app:layout_constraintStart_toEndOf="@+id/ivIncome"
+                app:layout_constraintTop_toTopOf="@+id/ivIncome" />
+
+            <TextView
+                android:id="@+id/tvIncomeAmount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="TextView"
+                app:layout_constraintStart_toStartOf="@+id/tvIncome"
+                app:layout_constraintTop_toBottomOf="@+id/tvIncome" />
+
+            <ImageView
+                android:id="@+id/ivStash"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                app:layout_constraintStart_toStartOf="@+id/ivIncome"
+                app:layout_constraintTop_toBottomOf="@+id/ivIncome"
+                app:srcCompat="@drawable/expense" />
+
+            <TextView
+                android:id="@+id/tvStash"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="TextView"
+                app:layout_constraintStart_toStartOf="@+id/tvIncomeAmount"
+                app:layout_constraintTop_toTopOf="@+id/ivStash" />
+
+            <TextView
+                android:id="@+id/tvStashAmount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="TextView"
+                app:layout_constraintStart_toStartOf="@+id/tvStash"
+                app:layout_constraintTop_toBottomOf="@+id/tvStash" />
+
+            <ImageView
+                android:id="@+id/ivTransactions"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="72dp"
+                app:layout_constraintStart_toEndOf="@+id/tvIncome"
+                app:layout_constraintTop_toTopOf="@+id/ivIncome"
+                app:srcCompat="@drawable/transactions" />
+
+            <TextView
+                android:id="@+id/tvRevenue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:text="TextView"
+                app:layout_constraintStart_toEndOf="@+id/ivTransactions"
+                app:layout_constraintTop_toTopOf="@+id/ivTransactions" />
+
+            <TextView
+                android:id="@+id/tvTransactionAmount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="TextView"
+                app:layout_constraintStart_toStartOf="@+id/tvRevenue"
+                app:layout_constraintTop_toBottomOf="@+id/tvRevenue" />
+
+            <ImageView
+                android:id="@+id/ivBalance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="@+id/ivTransactions"
+                app:layout_constraintTop_toTopOf="@+id/tvStash"
+                app:srcCompat="@drawable/balance" />
+
+            <TextView
+                android:id="@+id/tvBalance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="TextView"
+                app:layout_constraintStart_toStartOf="@+id/tvBalanceAmount"
+                app:layout_constraintTop_toTopOf="@+id/ivBalance" />
+
+            <TextView
+                android:id="@+id/tvBalanceAmount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="TextView"
+                app:layout_constraintStart_toStartOf="@+id/tvTransactionAmount"
+                app:layout_constraintTop_toBottomOf="@+id/tvBalance" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvWallet"
+        android:layout_width="409dp"
+        android:layout_height="563dp"
+        android:layout_marginTop="32dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardView" />
+</androidx.constraintlayout.widget.ConstraintLayout>
